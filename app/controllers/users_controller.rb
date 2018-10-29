@@ -6,12 +6,12 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new
 
-		@user.user_name = params[:users][:user_name]
-		@user.first_name = params[:users][:first_name]
-	    @user.last_name = params[:users][:last_name]
-	    @user.email = params[:users][:email]
-	    @user.password = params[:users][:password]
-	    @user.password_confirmation = params[:users][:password_confirmation]
+		@user.user_name = params[:user][:user_name]
+		@user.first_name = params[:user][:first_name]
+	    @user.last_name = params[:user][:last_name]
+	    @user.email = params[:user][:email]
+	    @user.password = params[:user][:password]
+	    @user.password_confirmation = params[:user][:password_confirmation]
 
         if @user.save
 		  # if request.xhr?
