@@ -1,0 +1,29 @@
+<%= form_for :users, url: users_path, html: {id: 'signUpForm'} do |f| %>
+  <p>
+    <%= f.text_field :user_name, class: "form-control", placeholder: 'User Name' %>
+  </p>
+
+  <p>
+    <%= f.text_field :first_name, class: "form-control", placeholder: 'First Name'%>
+  </p>
+
+  <p>
+    <%= f.text_field :last_name, class: "form-control", placeholder: 'Last Name' %>
+  </p>
+
+  <p>
+    <%= f.email_field :email, class: "form-control", placeholder: 'Email' %>
+  </p>
+
+  <p>
+    <%= f.password_field :password, class: "form-control", placeholder: 'Password' %>
+  </p>
+
+  <p>
+    <%= f.password_field :password_confirmation, class: "form-control", placeholder: 'Confirm Password' %>
+  </p>
+
+  <p>
+    <%= f.submit 'Sign Up', id: 'signUpSubmit', class: "btn btn-primary btn-block" %>
+  </p>
+<% end %>
