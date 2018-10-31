@@ -10,6 +10,15 @@
   </head>
 
   <body>
+
+    <% if current_user %>
+      <%= link_to( 'Sign out', session_path, method: :delete, class: 'btn btn-danger btn-lg', role: 'button') %>
+      <div class='flash'>Welcome, <%= current_user.user_name %>!</div>
+    <% else %>
+      <%= link_to( 'Sign In', new_session_path, class: 'btn btn-warning btn-lg', role: 'button') %>
+      <%= link_to( 'Sign Up', new_user_path, class: 'btn btn-warning btn-lg', role: 'button') %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
